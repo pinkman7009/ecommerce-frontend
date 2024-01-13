@@ -1,0 +1,41 @@
+.filters {
+  flex: 1;
+}
+.filterHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.filterHeader H3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+.filterHeader button {
+  background: none;
+  color: rgb(16, 122, 121);
+  font-size: 1rem;
+  border: none;
+}
+.filterGroup {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-top: 1px solid #e4e4e4;
+  border-bottom: 1px solid #e4e4e4;
+}
+.filterLabel {
+  font-size: 1rem !important;
+}
+.filterItem input {
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+.filterItem label {
+  font-weight: 300;
+}
+
+@media screen and (max-width: 767px) {
+  .filters {
+    display: none;
+  }
+}
