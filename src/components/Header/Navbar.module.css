@@ -9,13 +9,12 @@
   justify-content: space-between;
   padding: 1rem;
   height: 100px;
+  overflow-y: hidden;
 }
 
 .navbarLeft {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  flex: 1;
 }
 
 .navbarRight {
@@ -38,11 +37,11 @@
 
 .productInfoText {
   margin-left: 1rem;
+  font-size: 0.875rem;
 }
 
 .links > li {
   margin: 1rem;
-  font-weight: bold;
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -74,27 +73,25 @@
   display: none;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1100px) {
+  .searchbar {
+    display: none;
+  }
+  .links .searchIcon {
+    display: block;
+  }
   .linkText {
     display: none;
   }
+}
 
+@media screen and (max-width: 767px) {
   .hamburger {
     display: block;
   }
 
   .navbarLeft {
-    flex-direction: column;
-    align-items: flex-start;
     position: relative;
-  }
-
-  .searchIcon {
-    display: block;
-  }
-
-  .searchbar {
-    display: none;
   }
 
   .logo {
@@ -124,5 +121,14 @@
 
   .navbarLeft .links .showMenu {
     display: flex;
+  }
+
+  .productInfo {
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+  }
+  .navbarRight {
+    flex: 1;
   }
 }

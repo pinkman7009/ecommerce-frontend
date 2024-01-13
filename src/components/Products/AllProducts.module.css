@@ -26,6 +26,7 @@
 /* Products Section */
 
 .productSection {
+  position: relative;
   flex: 3;
 }
 
@@ -39,7 +40,11 @@
   display: flex;
   align-items: flex-end;
 }
-.header button {
+
+.sort {
+  position: relative;
+}
+.header .sortButton {
   background-color: #fff;
   border: 1px solid #e4e4e4;
   padding: 0.5rem;
@@ -49,9 +54,30 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 120px;
+  min-width: 120px;
   font-weight: 300;
   cursor: pointer;
+}
+.header .sortButton svg {
+  margin-right: 1rem;
+}
+
+.sortBox {
+  z-index: 2;
+  position: absolute;
+  top: 50px;
+  right: 10px;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 3px;
+  font-size: 0.875rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.option {
+  margin-bottom: 1rem;
+}
+.radioLabel {
+  margin-left: 1rem;
 }
 
 .headerText h3 {
@@ -143,7 +169,7 @@
 .value .amount {
   font-weight: bold;
   font-size: 1rem;
-  margin-right: 1rem;
+  margin-right: 0.5rem;
 }
 
 .info {

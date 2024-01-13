@@ -7,9 +7,9 @@
   color: #fff;
 }
 
-.footerTop {
+.footer .footerTop {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap !important;
 }
 
 .footerGroup {

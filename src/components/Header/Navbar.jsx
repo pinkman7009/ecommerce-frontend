@@ -10,7 +10,7 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 import * as styles from "./Navbar.module.css";
 import logoUrl from "../../assets/logo.png";
 
-const Navbar = () => {
+const Navbar = ({ setSearchTerm }) => {
   const [showMenu, setShowMenu] = useState(false);
 
   const toggleMenu = () => {
@@ -42,6 +42,7 @@ const Navbar = () => {
         <input
           type="text"
           placeholder="Search for products"
+          onChange={(e) => setSearchTerm(e.target.value)}
           className={styles.searchbar}
         />
 

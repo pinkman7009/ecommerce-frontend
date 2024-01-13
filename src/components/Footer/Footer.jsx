@@ -84,7 +84,7 @@ const Footer = () => {
           <ul className={styles.footerLinks}>
             <li>Shipping Policy | Cancellation Policy</li>
             <li>
-              &copy {new Date().getFullYear()} Bewakoof Private Limited. All
+              &copy; {new Date().getFullYear()} Bewakoof Private Limited. All
               Rights Reserved.
             </li>
             <li className={styles.icons}>

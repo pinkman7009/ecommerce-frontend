@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import * as styles from "./AllProducts.module.css";
 import { FaStar, FaHeart, FaRegHeart } from "react-icons/fa";
 
@@ -21,10 +21,6 @@ const ProductItem = ({ product }) => {
     ratings,
     discount,
   } = product;
-
-  useEffect(() => {
-    console.log({ liked });
-  }, [liked]);
 
   const discountedAmount = +amount - (amount * discount) / 100;
   return (

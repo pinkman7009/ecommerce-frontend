@@ -2,7 +2,7 @@ import * as styles from "./AllProducts.module.css";
 import Filters from "./ProductFilters/Filters";
 import ProductsList from "./ProductsList";
 
-const AllProducts = () => {
+const AllProducts = ({ searchTerm }) => {
   return (
     <div className={styles.productsSection}>
       <ul className={styles.breadcrumbs}>
@@ -15,7 +15,7 @@ const AllProducts = () => {
       </ul>
       <div className={styles.productsData}>
         <Filters />
-        <ProductsList />
+        <ProductsList searchTerm={searchTerm} />
       </div>
     </div>
   );

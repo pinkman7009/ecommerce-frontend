@@ -1,15 +1,18 @@
+import { useState } from "react";
 import Header from "../components/Header";
 import Products from "../components/Products";
 import Footer from "../components/Footer";
 
-const home = () => {
+const Home = () => {
+  const [searchTerm, setSearchTerm] = useState("");
+
   return (
     <div className="container">
-      <Header />
-      <Products />
+      <Header setSearchTerm={setSearchTerm} />
+      <Products searchTerm={searchTerm} />
       <Footer />
     </div>
   );
 };
 
-export default home;
+export default Home;

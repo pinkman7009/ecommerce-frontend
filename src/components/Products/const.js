@@ -1,4 +1,4 @@
-const products = [
+export const products = [
   {
     img_url:
       "https://img3.junaroad.com/uiproducts/17927167/pri_175_p-1629181577.jpg",
@@ -170,5 +170,3 @@ const products = [
     discount: 50,
   },
 ];
-
-export default products;

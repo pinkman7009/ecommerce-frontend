@@ -12,3 +12,10 @@
   height: 400px;
   object-fit: cover;
 }
+
+@media screen and (max-width: 767px) {
+  .headerImg {
+    max-height: 300px;
+    object-fit: contain;
+  }
+}
