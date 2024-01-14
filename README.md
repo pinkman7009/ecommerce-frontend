@@ -1,8 +1,31 @@
-# React + Vite
+# Ecommerce Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The frontend for a basic ecommerce site which includes searching, filtering, and sorting of products and has been made fully responsive.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Searches for products using a debounce function which registers key strokes after a 500ms delay, for optimization.
+2. Filtering of products based on a number of filters, made possible with state management using React Context API.
+3. Sorts products based on popularity and price.
+
+## Screenshots
+
+### Desktop
+
+<img src='./public/pic1.png'>
+<img src='./public/pic2.png'>
+<img src='./public/pic3.png'>
+
+### Mobile
+
+<img src='./public/pic4.png'>
+
+## To Run
+
+1. Clone into repo
+2. Run `npm install`
+3. Run `npm run dev`
+
+## Live Demo
+
+https://ecommerce-tmrw.vercel.app/

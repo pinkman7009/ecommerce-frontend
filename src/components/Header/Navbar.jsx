@@ -6,6 +6,7 @@ import {
   FaRegUserCircle,
   FaSearch,
 } from "react-icons/fa";
+import { IoClose } from "react-icons/io5";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import * as styles from "./Navbar.module.css";
 import logoUrl from "../../assets/logo.png";
@@ -30,6 +31,7 @@ const Navbar = ({ setSearchTerm }) => {
           <li>Men</li>
           <li>Women</li>
           <li>Accessories</li>
+          <IoClose className={styles.cross} onClick={toggleMenu} />
         </div>
         <div className={styles.productInfo}>
           <FaChevronLeft />

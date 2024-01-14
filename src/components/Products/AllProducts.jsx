@@ -46,11 +46,11 @@ const AllProducts = ({ searchTerm }) => {
             visibleClassname={"visibleSortMobile"}
           />
         ) : null}
-        <ActionButtons
+        {/* <ActionButtons
           setShowFilterMobile={setShowFilterMobile}
           setShowSort={setShowSort}
           sortBy={sortBy}
-        />
+        /> */}
       </div>
     </>
   );

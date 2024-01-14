@@ -10,8 +10,14 @@
   padding: 1rem;
   height: 100px;
   overflow-y: hidden;
+  z-index: 100;
+  background: #fff;
+  position: sticky;
+  top: 0;
 }
-
+.cross {
+  display: none;
+}
 .navbarLeft {
   display: flex;
   align-items: center;
@@ -90,37 +96,42 @@
     display: block;
   }
 
-  .navbarLeft {
+  /* .navbarLeft {
     position: relative;
+    overflow: visible;
+  } */
+  .cross {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
   }
 
   .logo {
     margin-right: 0;
+    height: 100px;
+    width: 100px;
   }
 
   .navbarLeft .links {
-    display: none;
+    position: fixed;
+    left: -100%;
+    top: 5rem;
     flex-direction: column;
-    position: absolute;
-    top: 60px;
-    left: 0;
     background-color: #fff;
-    border: 1px solid #ccc;
-    padding: 1rem;
-    width: 100%;
-    z-index: 1;
+    width: 50%;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    padding-bottom: 1rem;
+    z-index: 100;
   }
 
-  .navbarLeft .links li {
-    margin: 0.5rem;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-  }
-
-  .navbarLeft .links .showMenu {
-    display: flex;
+  .navbarLeft .links.showMenu {
+    left: 0;
   }
 
   .productInfo {
