@@ -4,6 +4,7 @@ import Filters from "./ProductFilters/Filters";
 import ProductsList from "./ProductsList";
 import ActionButtons from "../Buttons/ActionButtons";
 import ProductSort from "./ProductSort/ProductSort";
+import ScrollToTopButton from "../Buttons/ScrollToTop";
 
 const AllProducts = ({ searchTerm }) => {
   const [showFilterMobile, setShowFilterMobile] = useState(false);
@@ -46,11 +47,12 @@ const AllProducts = ({ searchTerm }) => {
             visibleClassname={"visibleSortMobile"}
           />
         ) : null}
-        {/* <ActionButtons
+        <ActionButtons
           setShowFilterMobile={setShowFilterMobile}
           setShowSort={setShowSort}
           sortBy={sortBy}
-        /> */}
+        />
+        <ScrollToTopButton />
       </div>
     </>
   );

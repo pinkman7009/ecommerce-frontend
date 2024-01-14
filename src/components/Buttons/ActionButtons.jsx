@@ -1,5 +1,5 @@
 import React from "react";
-import * as styles from "./ActionButtons.module.css";
+import * as styles from "./Buttons.module.css";
 import { IoFilter } from "react-icons/io5";
 import { FaSortAmountDownAlt } from "react-icons/fa";
 import { sortOptions } from "../Products/ProductSort/const";
