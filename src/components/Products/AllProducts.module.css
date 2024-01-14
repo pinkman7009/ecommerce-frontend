@@ -142,7 +142,7 @@
   position: absolute;
   bottom: 10px;
   left: 0;
-  z-index: 2;
+  z-index: 1;
 }
 .ratings svg {
   fill: rgb(255, 221, 0);
@@ -220,6 +220,7 @@
 
 .actions {
   display: none;
+  z-index: 100 !important;
 }
 
 /* Media queries */
@@ -238,8 +239,8 @@
   }
 
   .actions {
-    background: #fff;
-    padding: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     position: sticky;
     bottom: 0;
     display: block;
