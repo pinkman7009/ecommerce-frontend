@@ -3,7 +3,7 @@ import * as styles from "./Filters.module.css";
 import FilterGroup from "./FilterGroup";
 import useFilterContext from "../../../hooks/useFilterContext";
 
-const Filters = () => {
+const Filters = ({ visibleClassname }) => {
   const { dispatch } = useFilterContext();
 
   const clearAllFilters = () => {
@@ -11,8 +11,10 @@ const Filters = () => {
       type: "CLEAR_ALL_FILTERS",
     });
   };
+
+  console.log({ visibleClassname });
   return (
-    <div className={styles.filters}>
+    <div className={`${styles.filters} ${styles[visibleClassname]}`}>
       <div className={styles.filterHeader}>
         <h3>Filters ({filters.length})</h3>
         <button onClick={clearAllFilters}>Clear All</button>

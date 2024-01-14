@@ -5,14 +5,19 @@ import * as styles from "./AllProducts.module.css";
 import ProductItem from "./ProductItem";
 import useFilterContext from "../../hooks/useFilterContext";
 import ProductSort from "./ProductSort/ProductSort";
+import ActionButtons from "../Buttons/ActionButtons";
 
 import { products } from "./const";
 import { sortOptions } from "./ProductSort/const";
 
-const ProductsList = ({ searchTerm }) => {
+const ProductsList = ({
+  searchTerm,
+  showSort,
+  setShowSort,
+  sortBy,
+  setSortBy,
+}) => {
   const { state: filters } = useFilterContext();
-  const [showSort, setShowShort] = useState(false);
-  const [sortBy, setSortBy] = useState("");
 
   const filterProducts = useCallback(
     (product) => {
@@ -51,9 +56,9 @@ const ProductsList = ({ searchTerm }) => {
       ? filteredProducts.filter(
           (product) =>
             product.product_name
-              .toLowerCase()
-              .includes(searchTerm.toLowerCase()) ||
-            product.brand_name.toLowerCase().includes(searchTerm.toLowerCase())
+              ?.toLowerCase()
+              .includes(searchTerm?.toLowerCase()) ||
+            product.brand?.toLowerCase().includes(searchTerm?.toLowerCase())
         )
       : filteredProducts;
   const sortedProducts =
@@ -66,12 +71,12 @@ const ProductsList = ({ searchTerm }) => {
       <div className={styles.header}>
         <div className={styles.headerText}>
           <h3>T Shirts for Men</h3>
-          <p>{filteredProducts.length} Products</p>
+          <p>{sortedProducts.length} Products</p>
         </div>
 
         <button
           className={styles.sortButton}
-          onClick={() => setShowShort((showSort) => !showSort)}
+          onClick={() => setShowSort((showSort) => !showSort)}
         >
           <FaSortAmountDownAlt />
           Sort by{" "}
@@ -81,9 +86,10 @@ const ProductsList = ({ searchTerm }) => {
       </div>
       {showSort ? (
         <ProductSort
-          setShowSort={setShowShort}
+          setShowSort={setShowSort}
           sortBy={sortBy}
           setSortBy={setSortBy}
+          visibleClassname={"visibleSortDesktop"}
         />
       ) : null}
 

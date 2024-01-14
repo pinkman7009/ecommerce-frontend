@@ -53,7 +53,7 @@ const ProductItem = ({ product }) => {
         <div className={styles.value}>
           <p className={styles.amount}>₹{discountedAmount}</p>
           <p>
-            MRP: ₹ {amount}{" "}
+            <s>MRP: ₹ {amount} </s>
             <span className={styles.discount}>(Save {discount}%)</span>
           </p>
         </div>
